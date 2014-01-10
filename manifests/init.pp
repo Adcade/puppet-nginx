@@ -66,7 +66,7 @@ class nginx {
     require => Package['nginx'],
   }
 
-  file { $nginx_conf:
+  file { '/etc/nginx/conf.d':
     ensure  => directory,
     mode    => '0644',
     owner   => 'root',
@@ -82,7 +82,7 @@ class nginx {
     require => Package['nginx'],
   }
 
-  file { $nginx_includes:
+  file { '/etc/nginx/includes':
     ensure  => directory,
     mode    => '0644',
     owner   => 'root',
